@@ -8,7 +8,7 @@ pipeline {
         stage("Checkout") {
             steps{
                 echo "Checkout source code"
-                git "branch"
+                git branch: "master"
             }
         }
 
