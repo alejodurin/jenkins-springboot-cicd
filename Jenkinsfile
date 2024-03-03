@@ -18,8 +18,8 @@ pipeline {
                     buildJava {
                         buildTool = 'maven'
                         mavenConfig = [
-                            settingsWithFlag = '',
-                            pomFile = 'pom.xml',
+                            settingsWithFlag: '',
+                            pomFile: 'pom.xml',
                             additional: '',
                         ]
                     } //Run Sonarqube analysis
