@@ -11,5 +11,20 @@ services:
       - jenkins_home:/var/jenkins_home
     restart: always
 
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: test123
+      MYSQL_USER: alejo
+      MYSQL_PASSWORD: test123
+      MYSQL_DATABASE: springboot
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
 volumes:
   jenkins_home:
+  mysql_data:
