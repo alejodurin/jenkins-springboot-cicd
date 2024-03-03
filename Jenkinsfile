@@ -2,7 +2,7 @@
 //@Library('dxraSharedLib')
 
 pipeline {
-    agent { label 'Linux-AWS' }
+    agent any
 
     stages {
         //stage("Checkout") {
