@@ -5,12 +5,12 @@ pipeline {
     agent { label 'Linux-AWS' }
 
     stages {
-        stage("Checkout") {
-            steps{
-                echo "Checkout source code"
-                git branch: "master"
-            }
-        }
+        //stage("Checkout") {
+        //    steps{
+        //        echo "Checkout source code"
+        //        git branch: "master"
+        //    }
+        //}
 
         stage('Build and test') {
             steps {
