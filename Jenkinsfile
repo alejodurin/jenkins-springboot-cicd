@@ -18,7 +18,7 @@ pipeline {
                     buildJava {
                         buildTool = 'maven'
                         mavenConfig = [
-                            settingWithFlag = '',
+                            settingsWithFlag = '',
                             pomFile = 'pom.xml',
                             additional: '',
                         ]
