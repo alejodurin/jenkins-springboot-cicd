@@ -1,5 +1,5 @@
 #!groovy
-@Library('dxraSharedLib')
+//@Library('dxraSharedLib')
 
 pipeline {
     agent { label 'Linux-AWS' }
