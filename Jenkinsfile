@@ -1,16 +1,16 @@
 #!groovy
-Library('dxraSharedLib')
+//@Library('dxraSharedLib')
 
 pipeline {
-    agent { label 'Linux-AWS' }
+    agent any
 
     stages {
-        stage("Checkout") {
-            steps{
-                echo "Checkout source code"
-                git "branch"
-            }
-        }
+        //stage("Checkout") {
+        //    steps{
+        //        echo "Checkout source code"
+        //        git branch: "master"
+        //    }
+        //}
 
         stage('Build and test') {
             steps {
@@ -18,8 +18,8 @@ pipeline {
                     buildJava {
                         buildTool = 'maven'
                         mavenConfig = [
-                            settingWithFlag = '',
-                            pomFile = 'pom.xml',
+                            settingsWithFlag: '',
+                            pomFile: 'pom.xml',
                             additional: '',
                         ]
                     } //Run Sonarqube analysis
